@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Forma</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style1.css">
+	<script>
+		function showForm() {
+		document.getElementById("auth").hidden = false;
+		document.getElementById("link").hidden = true;
+		}
+	</script>
+</head>
+<body>
+<div class="block_decorate">
+    <div class="ven1"><img width="200px" height="70px" src="ven.png"></div>
+    <h1 align="center"><font face="Brush Script MT"> <b> Предложить автора </b></font></h1>
+    <div class="ven"><img width="200px" height="70px" src="ven.png"></div>
+</div>
+<form id="auth">
+	<fieldset class="one">
+		<legend align="center"><font face="fantasy" color="DarkRed">Войти:</font></legend>
+		<p><label>Логин: </label><input name="user" required></p>
+		<p><label>Пароль: </label><input name="pass" type="password" required></p>
+		<p><input type="submit" value="Войти"></p>
+	</fieldset>
+</form>
+<form action="https://www.ya.ru/search?" id="UserEnter" name="UserEnter" target="_blank">
+<p> <input type="hidden" name="q" value="search"></p>
+	<fieldset class="one">
+		<legend align="center"><font face="fantasy" color="DarkRed">Заполните эту форму:</font></legend>
+		<p><label>Имя автора</label><input type="text" name="name" size="30" value="Марина"></p>
+		<p><label>Отчество автора</label><input type="text" name="second-name" size="30"  value="Ивановна"></p>
+		<p><label>Фамилия автора </label><input type="text" name="surname" size="30" value="Цветаева"></p>
+		<p><label>Дата рождения </label><input type="date" name="date_born" size="30" value="1892-10-08"></p>
+		<p><label>Дата смерти </label><input type="date" name="date_death" size="30" value="1941-08-31"></p>
+		<p><label>Возраст на момент переезда</label><input type="number" name="age" size="30" min="1" max="100" value="30"></p>
+        <p>В какой стране проживал(а) после эмиграции:
+            <input type="Checkbox" name="residence"  value="Франция" checked> <font color="DarkRed">Франция</font>
+            <input type="Checkbox"  name="residence"><font color="DarkRed">Германия</font>
+            <input type="Checkbox" name="residence" value="Чехия" checked><font color="DarkRed">Чехия</font>
+            <input type="Checkbox" name="residence"><font color="DarkRed">США</font>
+            <input type="Checkbox" name="residence"><font color="DarkRed">Польша</font>
+         </p>
+        <p>Приехал(а) ли обратно в Россию?:
+        <input type="Radio" name="place" value="Moscow">да
+        <input type="Radio" name="place" value="Nizhny" checked >нет
+        </p>
+		<p> Род деятельности до эмиграции:
+		<select name="travail" id="selectBox" onchange="document.getElementById('textInput').style.display = this.value === 'other' ? 'block' : 'none';">
+        <option value="option1">Поэт/поэтесса</option>
+			<option value="option2">Писатель(ница)</option>
+			<option value="option2">Критик(есса)</option>
+			<option value="option2">Переводчик(ца)</option>
+			<option value="other">Другое...</option>
+        </select>
+        <input type="text" id="textInput" style="display:none;" placeholder="Введите своё значение"/>
+        </p>
+		<p> Род деятельности в эмиграции:
+		<select name="travail" id="selectBox2" onchange="document.getElementById('textInput').style.display = this.value === 'other' ? 'block' : 'none';">
+        <option value="option1">Поэт/поэтесса</option>
+			<option value="option2">Писатель(ница)</option>
+			<option value="option2">Критик(есса)</option>
+			<option value="other">Другое...</option>
+        </select>
+        <input type="text" id="textInput2" style="display:none;" placeholder="Введите своё значение"/>
+        </p>
+		<p> В творчестве ориентировался(-ась) на:
+		<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheck1" checked>
+		<label class="form-check-label" for="flexSwitchCheck1"><font color="DarkRed">Классическую традицию</font></label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheck2" checked>
+	<label class="form-check-label" for="flexSwitchCheck2"><font color="DarkRed">Русское авангардное искусство</font></label>
+</div>
+		<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheck3">
+			<label class="form-check-label" for="flexSwitchCheck3"><font color="DarkRed">Западных модернистов</font></label>
+</div>
+		</p>
+		<p> Расскажите немного о творчестве автора:
+        <br>
+        <TEXTAREA cols=50 rows=15 name="textarea" >Для заметок</TEXTAREA>
+        </p>
+		<input type="Reset"  name="Reset"  value="Обновить">
+		<input type="Submit" name="submit" value="Отправить">
+	</fieldset>
+
+</form>
+</body>
+</html>
