@@ -60,10 +60,6 @@ function send() {
         document.getElementById("UserEnter").submit();
 }
 
-function verify_send() {
-    verify();
-    send();
-}
 
 let messageText = document.getElementById("result").innerText
 let messageText2 = document.getElementById("result2").innerText
@@ -78,13 +74,9 @@ let result3;
 
 
 const elementA = document.getElementById("a");
-elementA.addEventListener('keyup', verify);
 const elementB = document.getElementById("h");
-elementB.addEventListener('keyup', verify);
 const elementC = document.getElementById("r");
-elementC.addEventListener('keyup', verify);
 const elementD = document.getElementById("m");
-elementD.addEventListener('keyup', verify);
 
 const elementVerify = document.getElementById("verify");
 elementVerify.addEventListener('click', verify);
