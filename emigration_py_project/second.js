@@ -15,26 +15,26 @@ if (m >= v1) {
         result = "Можно"
         document.getElementById("result").innerText = messageText + result;
         document.getElementsByName('result')[0].value = result;
-        check = true;
+ 
 
     } else {
         result = "Нельзя"
         document.getElementById("result").innerText = messageText + result;
         document.getElementsByName('result')[0].value = result;
-        check = false;
+    
 
     }
 if (m >= v2) {
         result2 = "Можно"
         document.getElementById("result2").innerText = messageText2 + result2;
         document.getElementsByName('result2')[0].value = result2;
-        check = true;
+ 
 
     } else {
         result2 = "Нельзя"
         document.getElementById("result2").innerText = messageText2 + result2;
         document.getElementsByName('result2')[0].value = result2;
-        check = false;
+      
 
     }
 
@@ -42,25 +42,22 @@ if (m >= v3) {
         result3 = "Можно"
         document.getElementById("result3").innerText = messageText3 + result3;
         document.getElementsByName('result3')[0].value = result3;
-        check = true;
+    
 
     } else {
         result3 = "Нельзя"
         document.getElementById("result3").innerText = messageText3 + result3;
         document.getElementsByName('result3')[0].value = result3;
-        check = false;
     }
 }
 
 function send() {
-    if (check) {
         let textCondition = document.getElementsByTagName('p')[0].innerText
         document.getElementsByName('formulation')[0].value = textCondition;
         document.getElementsByName('result')[0].value = result;
         document.getElementsByName('result2')[0].value = result2;
         document.getElementsByName('result3')[0].value = result3;
         document.getElementById("UserEnter").submit();
-    }
 }
 
 function verify_send() {
@@ -78,7 +75,7 @@ console.log(messageText3)
 let result;
 let result2;
 let result3;
-let check = false;
+
 
 const elementA = document.getElementById("a");
 elementA.addEventListener('keyup', verify);
